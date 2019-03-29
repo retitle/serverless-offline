@@ -492,7 +492,9 @@ class Offline {
             // Payload processing
             const encoding = utils.detectEncoding(request);
 
-            request.payload = request.payload && request.payload.toString(encoding);
+            /* Commented out because it's messing with encoding when uploading
+               a file */
+            //request.payload = request.payload && request.payload.toString(encoding);
             request.rawPayload = request.payload;
 
             // Headers processing
